@@ -40,7 +40,8 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class VideoRecorderActivity extends AppCompatActivity implements OnRecordingListener, OnRenderListener, CameraCallback {
+public class VideoRecorderActivity extends AppCompatActivity
+        implements OnRecordingListener, OnRenderListener, CameraCallback {
 
     private TrinityRecord mRecord;
     File newFile;
@@ -55,6 +56,8 @@ public class VideoRecorderActivity extends AppCompatActivity implements OnRecord
     ImageView tick;
     ImageView cross;
     ImageView back;
+    TrinityPreviewView preview;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,10 +76,10 @@ public class VideoRecorderActivity extends AppCompatActivity implements OnRecord
         findViewById(R.id.accept).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Toast.makeText(getApplicationContext(), "" + newFile.getAbsolutePath(), Toast.LENGTH_LONG).show();
+                //                Toast.makeText(getApplicationContext(), "" + newFile.getAbsolutePath(), Toast.LENGTH_LONG).show();
                 Intent returnIntent = new Intent();
-                returnIntent.putExtra("result",newFile.getAbsolutePath());
-                setResult(Activity.RESULT_OK,returnIntent);
+                returnIntent.putExtra("result", newFile.getAbsolutePath());
+                setResult(Activity.RESULT_OK, returnIntent);
                 finish();
             }
         });
@@ -92,7 +95,7 @@ public class VideoRecorderActivity extends AppCompatActivity implements OnRecord
             @Override
             public void onClick(View v) {
                 Intent returnIntent = new Intent();
-                setResult(Activity.RESULT_CANCELED,returnIntent);
+                setResult(Activity.RESULT_CANCELED, returnIntent);
                 finish();
             }
         });
@@ -107,13 +110,15 @@ public class VideoRecorderActivity extends AppCompatActivity implements OnRecord
                 String path = getExternalCacheDir().getAbsolutePath() + "/VID_" + date + ".mp4";
 
                 try {
-                    File storageDir = getApplicationContext().getExternalFilesDir(Environment.DIRECTORY_MOVIES);
+                    File storageDir = getApplicationContext().getExternalFilesDir(
+                            Environment.DIRECTORY_MOVIES);
                     // newFile = File.createTempFile("videocapture", ".3gp", storageDir);
                     newFile = File.createTempFile("videocapture", ".mp4", storageDir);
                     try {
                         Log.e("FilePath==> ", newFile.getAbsolutePath());
                         mRecord.setSpeed(Speed.VERY_SLOW);
-                        mRecord.startRecording(newFile.getAbsolutePath(), 720, 1280, 2000, 30, false, 44100, 1, 128, 60000);
+                        mRecord.startRecording(newFile.getAbsolutePath(), 720, 1280, 2000, 30,
+                                false, 44100, 1, 128, 60000);
                     } catch (InitRecorderFailException e) {
                         Log.e("Excetion => ", e.toString());
                         e.printStackTrace();
@@ -132,6 +137,7 @@ public class VideoRecorderActivity extends AppCompatActivity implements OnRecord
                 videoViewContainer.setVisibility(View.VISIBLE);
                 videoView.setVisibility(View.VISIBLE);
                 previewContainer.setVisibility(View.GONE);
+                preview.setVisibility(View.GONE);
                 new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -149,7 +155,7 @@ public class VideoRecorderActivity extends AppCompatActivity implements OnRecord
                             }
                         });
                     }
-                }, 4000);
+                }, 2000);
 
             }
         });
@@ -161,6 +167,7 @@ public class VideoRecorderActivity extends AppCompatActivity implements OnRecord
         videoViewContainer.setVisibility(View.GONE);
         videoView.setVisibility(View.GONE);
         previewContainer.setVisibility(View.VISIBLE);
+        preview.setVisibility(View.VISIBLE);
         tick.setVisibility(View.GONE);
         cross.setVisibility(View.GONE);
         start.setVisibility(View.VISIBLE);
@@ -171,27 +178,33 @@ public class VideoRecorderActivity extends AppCompatActivity implements OnRecord
     @Override
     protected void onResume() {
         super.onResume();
-            checkPermission();
-
+        checkPermission();
     }
 
     private void checkPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED &&
-                    checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED &&
-                    checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED &&
-                    checkSelfPermission(Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED) {
+            if (checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) ==
+                    PackageManager.PERMISSION_GRANTED && checkSelfPermission(
+                    Manifest.permission.READ_EXTERNAL_STORAGE) ==
+                    PackageManager.PERMISSION_GRANTED && checkSelfPermission(
+                    Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED &&
+                    checkSelfPermission(Manifest.permission.RECORD_AUDIO) ==
+                            PackageManager.PERMISSION_GRANTED) {
                 initializeCamera();
 
             } else {
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO}, 1992);
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                                Manifest.permission.READ_EXTERNAL_STORAGE,
+                                Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO},
+                        1992);
             }
         }
     }
 
     private void initializeCamera() {
         mediaController = new MediaController(this);
-        final TrinityPreviewView preview = findViewById(R.id.preview);
+        preview = findViewById(R.id.preview);
         mRecord = new TrinityRecord(this, preview);
         mRecord.setOnRenderListener(this);
         mRecord.setOnRecordingListener(this);
@@ -200,11 +213,11 @@ public class VideoRecorderActivity extends AppCompatActivity implements OnRecord
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+                                           @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
             initializeCamera();
-
         }
     }
 
@@ -246,12 +259,12 @@ public class VideoRecorderActivity extends AppCompatActivity implements OnRecord
     }
 
     @Override
-    public void dispatchOnFocusStart( PointF pointF) {
+    public void dispatchOnFocusStart(PointF pointF) {
 
     }
 
     @Override
-    public void dispatchOnPreviewCallback( byte[] bytes, int i, int i1, int i2) {
+    public void dispatchOnPreviewCallback(byte[] bytes, int i, int i1, int i2) {
 
     }
 

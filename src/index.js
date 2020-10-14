@@ -8,3 +8,5 @@
  */
 import { NativeModules } from 'react-native';
 // module.exports = NativeModules.RecordVideo;
+module.exports = NativeModules.SlowRecordMotion;
+

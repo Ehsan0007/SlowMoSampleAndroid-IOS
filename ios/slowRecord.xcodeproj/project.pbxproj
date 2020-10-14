@@ -18,6 +18,17 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* slowRecordTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* slowRecordTests.m */; };
 		4C08D90B911F2DA8C8AE2140 /* libPods-slowRecord-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A23E32B331A423CF45ADBE /* libPods-slowRecord-tvOS.a */; };
+		52D9DF65253706140079C8AA /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9DF64253706140079C8AA /* File.swift */; };
+		52D9DF68253706930079C8AA /* SlowRecordMotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D9DF67253706930079C8AA /* SlowRecordMotion.m */; };
+		52D9DF6D2537072F0079C8AA /* PreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D9DF6C2537072F0079C8AA /* PreviewViewController.m */; };
+		52D9DF712537074F0079C8AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D9DF702537074E0079C8AA /* Main.storyboard */; };
+		52D9DF73253710DC0079C8AA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D9DF72253710DC0079C8AA /* ViewController.m */; };
+		52D9DF80253711B50079C8AA /* TTMCaptureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D9DF7E253711540079C8AA /* TTMCaptureManager.m */; };
+		52D9DF81253711B80079C8AA /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D9DF7B253711540079C8AA /* SVProgressHUD.m */; };
+		52D9DF82253711BF0079C8AA /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 52D9DF7C253711540079C8AA /* SVProgressHUD.bundle */; };
+		52D9DF842537130D0079C8AA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D9DF832537130D0079C8AA /* CoreGraphics.framework */; };
+		52D9DF86253713130079C8AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D9DF85253713130079C8AA /* Foundation.framework */; };
+		52D9DF882537131C0079C8AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D9DF872537131C0079C8AA /* UIKit.framework */; };
 		65CE07071BF7A70B95316DE8 /* libPods-slowRecord-slowRecordTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D2E0D1462A6BB8E55DD8FE8 /* libPods-slowRecord-slowRecordTests.a */; };
 		C3A78F3BB05C2D859564DA2C /* libPods-slowRecord.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3BAA4D8E6E7143661851250 /* libPods-slowRecord.a */; };
 /* End PBXBuildFile section */
@@ -55,6 +66,24 @@
 		2D02E47B1E0B4A5D006451C7 /* slowRecord-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "slowRecord-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* slowRecord-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "slowRecord-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		524E5868EE22548B168AA6C2 /* Pods-slowRecord-slowRecordTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-slowRecord-slowRecordTests.debug.xcconfig"; path = "Target Support Files/Pods-slowRecord-slowRecordTests/Pods-slowRecord-slowRecordTests.debug.xcconfig"; sourceTree = "<group>"; };
+		52D9DF63253706130079C8AA /* slowRecord-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "slowRecord-Bridging-Header.h"; sourceTree = "<group>"; };
+		52D9DF64253706140079C8AA /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		52D9DF66253706440079C8AA /* SlowRecordMotion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlowRecordMotion.h; sourceTree = "<group>"; };
+		52D9DF67253706930079C8AA /* SlowRecordMotion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlowRecordMotion.m; sourceTree = "<group>"; };
+		52D9DF692537070D0079C8AA /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		52D9DF6B2537072F0079C8AA /* PreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreviewViewController.h; sourceTree = "<group>"; };
+		52D9DF6C2537072F0079C8AA /* PreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreviewViewController.m; sourceTree = "<group>"; };
+		52D9DF702537074E0079C8AA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		52D9DF72253710DC0079C8AA /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		52D9DF79253711540079C8AA /* SVProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		52D9DF7A253711540079C8AA /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		52D9DF7B253711540079C8AA /* SVProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		52D9DF7C253711540079C8AA /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		52D9DF7E253711540079C8AA /* TTMCaptureManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTMCaptureManager.m; sourceTree = "<group>"; };
+		52D9DF7F253711540079C8AA /* TTMCaptureManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTMCaptureManager.h; sourceTree = "<group>"; };
+		52D9DF832537130D0079C8AA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		52D9DF85253713130079C8AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		52D9DF872537131C0079C8AA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		53420AA2672E7DD6F109C080 /* Pods-slowRecord-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-slowRecord-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-slowRecord-tvOSTests/Pods-slowRecord-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		6D2E0D1462A6BB8E55DD8FE8 /* libPods-slowRecord-slowRecordTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-slowRecord-slowRecordTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EC402A4F96B63BFF5A94E39 /* libPods-slowRecord-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-slowRecord-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +111,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52D9DF842537130D0079C8AA /* CoreGraphics.framework in Frameworks */,
+				52D9DF882537131C0079C8AA /* UIKit.framework in Frameworks */,
+				52D9DF86253713130079C8AA /* Foundation.framework in Frameworks */,
 				C3A78F3BB05C2D859564DA2C /* libPods-slowRecord.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -125,6 +157,11 @@
 		13B07FAE1A68108700A75B9A /* slowRecord */ = {
 			isa = PBXGroup;
 			children = (
+				52D9DF702537074E0079C8AA /* Main.storyboard */,
+				52D9DF6B2537072F0079C8AA /* PreviewViewController.h */,
+				52D9DF6C2537072F0079C8AA /* PreviewViewController.m */,
+				52D9DF692537070D0079C8AA /* ViewController.h */,
+				52D9DF72253710DC0079C8AA /* ViewController.m */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -132,6 +169,10 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				52D9DF64253706140079C8AA /* File.swift */,
+				52D9DF63253706130079C8AA /* slowRecord-Bridging-Header.h */,
+				52D9DF66253706440079C8AA /* SlowRecordMotion.h */,
+				52D9DF67253706930079C8AA /* SlowRecordMotion.m */,
 			);
 			name = slowRecord;
 			sourceTree = "<group>";
@@ -139,6 +180,9 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52D9DF872537131C0079C8AA /* UIKit.framework */,
+				52D9DF85253713130079C8AA /* Foundation.framework */,
+				52D9DF832537130D0079C8AA /* CoreGraphics.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				A3BAA4D8E6E7143661851250 /* libPods-slowRecord.a */,
@@ -164,6 +208,26 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		52D9DF78253711540079C8AA /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				52D9DF79253711540079C8AA /* SVProgressHUD.h */,
+				52D9DF7A253711540079C8AA /* SVProgressHUD-Prefix.pch */,
+				52D9DF7B253711540079C8AA /* SVProgressHUD.m */,
+				52D9DF7C253711540079C8AA /* SVProgressHUD.bundle */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		52D9DF7D253711540079C8AA /* TTMCaptureManager */ = {
+			isa = PBXGroup;
+			children = (
+				52D9DF7E253711540079C8AA /* TTMCaptureManager.m */,
+				52D9DF7F253711540079C8AA /* TTMCaptureManager.h */,
+			);
+			path = TTMCaptureManager;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +238,8 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				52D9DF78253711540079C8AA /* SVProgressHUD */,
+				52D9DF7D253711540079C8AA /* TTMCaptureManager */,
 				13B07FAE1A68108700A75B9A /* slowRecord */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* slowRecordTests */,
@@ -292,7 +358,7 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = F92WBSNLJ3;
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1130;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -338,8 +404,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52D9DF712537074F0079C8AA /* Main.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				52D9DF82253711BF0079C8AA /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,8 +598,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52D9DF73253710DC0079C8AA /* ViewController.m in Sources */,
+				52D9DF81253711B80079C8AA /* SVProgressHUD.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				52D9DF65253706140079C8AA /* File.swift in Sources */,
+				52D9DF6D2537072F0079C8AA /* PreviewViewController.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				52D9DF68253706930079C8AA /* SlowRecordMotion.m in Sources */,
+				52D9DF80253711B50079C8AA /* TTMCaptureManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,6 +658,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 524E5868EE22548B168AA6C2 /* Pods-slowRecord-slowRecordTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -607,6 +682,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 85ACE455886E82FDB36F25C2 /* Pods-slowRecord-slowRecordTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = slowRecordTests/Info.plist;
@@ -645,6 +721,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = slowRecord;
+				SWIFT_OBJC_BRIDGING_HEADER = "slowRecord-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -668,6 +745,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = slowRecord;
+				SWIFT_OBJC_BRIDGING_HEADER = "slowRecord-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
